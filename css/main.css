@@ -92,6 +92,7 @@ main {
   height: auto;
   border: 2px solid #d1dde1;
   border-radius: 11px;
+  overflow-y: scroll;
 }
 .rowtype {
   width: 100%;
@@ -102,6 +103,7 @@ main {
   padding: 12px 12px;
   justify-content: space-around;
 }
+
 
 .rowtype h2 {
   font-size: 24px;
@@ -260,9 +262,13 @@ main {
 
 .book_item div {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   margin-top: 10px;
+}
+
+#buku_btn {
+  display: flex;
+  flex-direction: row;
 }
 
 .book_item #updateSelesai {
