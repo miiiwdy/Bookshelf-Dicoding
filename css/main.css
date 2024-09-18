@@ -1,0 +1,396 @@
+body {
+  padding: 10px 25px;
+  margin: 0;
+  background-color: #f7feff;
+}
+
+* {
+  color: #444444;
+  box-sizing: border-box;
+}
+
+header {
+  width: calc(100% - 50px);
+  height: auto;
+  position: fixed;
+  padding: 10px 25px 10px 0px;
+  left: 25px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 35px rgba(69, 69, 69, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+header h1 {
+  margin: 0 0 3px 0;
+  font-size: 21px;
+}
+
+header img {
+  width: 80px;
+  height: auto;
+}
+
+/* main */
+
+main {
+  margin-top: 150px;
+}
+
+/* pesan singkat */
+
+.pesansingkat {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 80px auto;
+}
+
+.pesansingkat h2 {
+  margin: 0;
+}
+
+.pesansingkat #dicoding_btn {
+  transition: transform 0.4s ease;
+  display: inline-block;
+}
+.pesansingkat #dicoding_btn:hover {
+  transform: scale(1.07);
+}
+
+.pesansingkat p {
+  font-weight: 500;
+  color: #515151;
+  margin-top: 8px;
+}
+
+.pesansingkat img {
+  width: 450px;
+  height: auto;
+  margin-right: 45px;
+}
+
+/* container */
+
+.row {
+  width: 100%;
+  height: 100vh;
+  border-radius: 18px;
+  border: 2px solid #d1dde1;
+  display: flex;
+  flex-direction: row;
+  padding: 12px 12px;
+}
+.column {
+  width: 60%;
+  height: auto;
+  border: 2px solid #d1dde1;
+  border-radius: 11px;
+}
+.rowtype {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: row;
+  padding: 12px 12px;
+  justify-content: space-around;
+}
+
+.rowtype h2 {
+  font-size: 24px;
+}
+
+/* tambah buku */
+
+.tambahbuku {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  height: 70%;
+  border: 2px solid #d1dde1;
+  border-radius: 11px;
+  margin-right: 15px;
+}
+
+.tambahbuku h2 {
+  margin-bottom: 10px;
+}
+
+/* book form */
+
+#bookForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+#bookForm label {
+  font-weight: 500;
+}
+
+#bookForm div {
+  width: 93%;
+}
+
+#bookForm #bookFormTitle,
+#bookFormAuthor,
+#bookFormYear {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  box-sizing: border-box;
+  padding: 8px;
+  text-align: left;
+  border: 2px solid #d1dde1;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#bookForm #iscomplete {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+#iscomplete input {
+  height: 20px;
+  width: 10%;
+  margin: 0;
+}
+
+::placeholder {
+  color: #818a8d;
+  font-weight: 500;
+}
+
+#bookForm button {
+  width: 50%;
+  height: 45px;
+  margin: 20px 5px;
+  border-radius: 8px;
+  border: 2px solid #9a9b9c00;
+  background-color: #72bffe;
+  color: #ffff;
+  font-weight: 600;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+#bookForm button:hover {
+  transform: scale(1.06);
+}
+
+/* search buku */
+
+.searchbuku {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.searchbuku h2 {
+  margin-bottom: 5px;
+}
+
+.searchbuku input {
+  width: 100%;
+  height: 35px;
+  border-radius: 7px;
+  box-sizing: border-box;
+  padding: 8px;
+  text-align: left;
+  border: 2px solid #d1dde1;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.searchbuku button {
+  height: 35px;
+  width: 20%;
+  border-radius: 7px;
+  border: 2px solid #9a9b9c00;
+  background-color: #72bffe;
+  color: #ffff;
+  font-weight: 600;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.searchbuku button:hover {
+  transform: scale(1.06);
+}
+
+#searchBook {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+
+/* book item */
+.book_item {
+  background-color: #f0f8ff;
+  border-radius: 7px;
+  padding: 15px;
+  border: 1.5px solid #e5e8e9;
+  margin-bottom: 10px;
+}
+
+.book_item h3 {
+  margin: 0;
+  color: #72bffe;
+}
+.book_item p {
+  margin: 6px 0;
+}
+
+.book_item div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.book_item #updateSelesai {
+  stroke: rgb(44, 203, 44);
+  width: 35px;
+  height: auto;
+  cursor: pointer;
+  margin-right: 9px;
+}
+.book_item #updateBelumSelesai {
+  stroke: orange;
+  width: 35px;
+  height: auto;
+  cursor: pointer;
+  margin-right: 9px;
+}
+.book_item #hapusBuku {
+  stroke: rgb(255, 74, 74);
+  width: 32px;
+  height: auto;
+  cursor: pointer;
+  margin-right: 9px;
+}
+.book_item #editBuku {
+  stroke: rgb(232, 199, 15);
+  width: 33px;
+  height: auto;
+  cursor: pointer;
+  margin-right: 9px;
+}
+
+/* edit buku */
+
+
+.modal {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  height: 80%;
+  border: 2px solid #d1dde1;
+  border-radius: 11px;
+  margin-right: 15px;
+}
+
+.modal h2 {
+  margin-bottom: 10px;
+}
+
+/* edit book form */
+
+#editBookForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+#editBookForm label {
+  font-weight: 500;
+}
+
+#editBookForm div {
+  width: 93%;
+}
+
+#editBookForm #editBookFormTitle,
+#editBookFormAuthor,
+#editBookFormYear {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  box-sizing: border-box;
+  padding: 8px;
+  text-align: left;
+  border: 2px solid #d1dde1;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#editBookForm #iscomplete {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+#iscomplete input {
+  height: 20px;
+  width: 10%;
+  margin: 0;
+}
+
+::placeholder {
+  color: #818a8d;
+  font-weight: 500;
+}
+
+#editBookFormSubmit {
+  width: 50%;
+  height: 45px;
+  margin: 20px 5px 0 5px;
+  border-radius: 8px;
+  border: 2px solid #9a9b9c00;
+  background-color: #72bffe;
+  color: #ffff;
+  font-weight: 600;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+#editBookFormSubmit:hover {
+  transform: scale(1.06);
+}
+#cancelEditBook {
+  width: 50%;
+  height: 45px;
+  margin: 5px 5px 0 5px;
+  border-radius: 8px;
+  border: 2px solid #9a9b9c00;
+  background-color: #ff6060;
+  color: #ffff;
+  font-weight: 600;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+#cancelEditBook:hover {
+  transform: scale(1.06);
+}

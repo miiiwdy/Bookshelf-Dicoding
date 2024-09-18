@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App Dicoding - Fahmi</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Bookshelf Application</h1>
+      <img src="assets/dicoding.png" alt="dicoding logo" />
+    </header>
+
+    <main>
+      <section class="pesansingkat">
+        <img src="assets/books.png" alt="buku" />
+        <div id="teks" style="display: flex; flex-direction: column">
+          <h2>Selamat Datang!</h2>
+          <p>
+            <span style="color: #72bffe; font-weight: 600">Bookshelf Application </span>adalah proyek dari
+            <span id="dicoding_btn" style="color: #72bffe;text-decoration: underline;cursor: pointer;font-weight: 600;">Dicoding</span>
+            yang dirancang untuk membantu Anda mengelola koleksi buku pribadi.
+            Dengan aplikasi ini, Anda dapat menambahkan, mengorganisir, dan
+            mencari buku favorit dengan mudah. Aplikasi ini dapat membantu Anda
+            menciptakan perpustakaan digital yang teratur dan mudah diakses.
+          </p>
+          <strong>Scroll ke bawah!</strong>
+        </div>
+      </section>
+      <div class="row">
+      <section class="modal" id="editBookModal">
+          <h2>Edit Data Buku</h2>
+          <form id="editBookForm" class="modal-content" data-testid="bookForm"  >
+              <div>
+                  <label for="editBookFormTitle">Judul</label>
+                  <input id="editBookFormTitle" type="text" placeholder="Masukkan Judul Buku"/>
+              </div>
+              <div>
+                  <label for="editBookFormAuthor">Penulis</label>
+                  <input id="editBookFormAuthor" type="text" placeholder="Masukkan Penulis Buku" />
+              </div>
+              <div>
+                  <label for="editBookFormYear">Tahun</label>
+                  <input id="editBookFormYear" type="number"placeholder="Masukkan Tahun Buku"/>
+              </div>
+              <div id="iscomplete">
+                <label for="editBookFormIsComplete">Selesai dibaca</label>
+                <input id="editBookFormIsComplete" type="checkbox" />
+              </div>
+              <button id="editBookFormSubmit" type="submit">
+                  Updata Buku
+              </button>
+              <button id="cancelEditBook" type="butotn" onclick="closeEditModal()">
+                  Batalkan Edit Buku
+              </button>
+          </form>
+      </section>
+      <section class="tambahbuku">
+          <h2>Tambah Buku Baru</h2>
+          <form id="bookForm" data-testid="bookForm"  >
+              <div>
+                  <label for="bookFormTitle">Judul</label>
+                  <input id="bookFormTitle" type="text" required data-testid="bookFormTitleInput" placeholder="Masukkan Judul Buku"/>
+              </div>
+              <div>
+                <label for="bookFormAuthor">Penulis</label>
+                <input id="bookFormAuthor" type="text" required data-testid="bookFormAuthorInput" placeholder="Masukkan Penulis Buku" />
+              </div>
+              <div>
+                  <label for="bookFormYear">Tahun</label>
+                  <input id="bookFormYear" type="number" required data-testid="bookFormYearInput" placeholder="Masukkan Tahun Buku"/>
+              </div>
+              <div id="iscomplete">
+                <label for="bookFormIsComplete">Selesai dibaca</label>
+                <input id="bookFormIsComplete" type="checkbox" data-testid="bookFormIsCompleteCheckbox" />
+              </div>
+              <button id="bookFormSubmit" type="submit" data-testid="bookFormSubmitButton">
+                  Masukkan Buku ke Rak
+              </button>
+          </form>
+      </section>
+      <div class="column">
+        <section class="searchbuku">
+            <h2>Cari Buku</h2>
+            <form id="searchBook" data-testid="searchBookForm">
+                <input id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput" placeholder="Ketik Judul Buku"/>
+                <button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">
+                    Cari
+                </button>
+            </form>
+        </section>
+        <div class="rowtype">
+          <section>
+              <h2>Belum selesai dibaca</h2>
+              <div id="incompleteBookshelfList" data-testid="incompleteBookList"></div>
+          </section>
+          
+          <section>
+              <h2>Selesai dibaca</h2>
+              <div id="completeBookshelfList" data-testid="completeBookList"></div>
+          </section>
+        </div>
+      </div>
+      </div>
+    
+
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
